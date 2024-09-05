@@ -56,4 +56,38 @@ selecionar(indice:number){
   this.btnCadastrar = false;
 }
 
+// Função de alterar
+alterar(){
+  //Alterar vetor
+  this.vetor[this.indice] = this.formulario.value as Pessoa;
+
+  //limpar inputs
+  this.formulario.reset();
+
+  //visibilidade dos botoes
+  this.btnCadastrar = true;
+}
+
+//Remoçao
+remover(){
+
+  // removendo pessoa do vetor
+  this.vetor.splice(this.indice, 1)
+
+  //limpar os inputs
+  this.formulario.reset();
+
+  //visibilidade dos botoes
+  this.btnCadastrar = true;
+}
+
+//funcao de cancelamento
+cancelar(){
+  //limpar dos inputs
+  this.formulario.reset();
+
+  //visibilidade dos botoes
+  this.btnCadastrar = true;
+}
+
 }
