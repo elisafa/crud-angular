@@ -1,12 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-componente04',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './componente04.component.html',
   styleUrl: './componente04.component.css'
 })
 export class Componente04Component {
 
+  // Variável para exibir o ocultar o quadrado
+  exibir:boolean = false;
+
+  // Funcao de acao para exibir ou acultar o quadrado
+  acao(){
+    if(this.exibir === true){
+      this.exibir = false;
+    }else{
+      this.exibir = true;
+    }
+  }
 }
