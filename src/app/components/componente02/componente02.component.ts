@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class Componente02Component {
 
+    // Função para exibir umamensagem
+    mensagem(){
+      alert("Hello World!")
+    }
 }
